@@ -20,9 +20,6 @@ function App() {
 
     setTeamMembers([...teamMembers, newMember]);
   }
-
-  console.log(teamMembers);
-
   return (
     <div className="App">
       <TeamForm addTeamMember={addTeamMember} />

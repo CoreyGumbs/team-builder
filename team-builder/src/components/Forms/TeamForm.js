@@ -31,6 +31,7 @@ const TeamForm = props => {
                     handleFormChanges={handleChanges} 
                     inputType={'text'} 
                     placeHolder={'Enter Your Name'} 
+                    value={member.name}
                 />
                 <FormInput 
                     labelName={'Email:'} 
@@ -38,15 +39,17 @@ const TeamForm = props => {
                     handleFormChanges={handleChanges} 
                     inputType={'email'} 
                     placeHolder={'Enter Valid Email'} 
+                    value={member.email}
                 />
                 <FormInput 
                     labelName={'Role:'} 
                     inputName={'role'} 
                     handleFormChanges={handleChanges} 
                     inputType={'text'} 
-                    placeHolder={'Enter Your Role'} 
+                    placeHolder={'Enter Your Role'}
+                    value={member.role} 
                 />
-                 <button type="submit">Submit</button>
+                 <button type='submit'>Add Member</button>
             </form>
         </div>
     )
