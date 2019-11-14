@@ -12,11 +12,14 @@ function App() {
     const newMember = {
       name: member.name,
       email: member.email,
-      role: member.role
+      role: member.role,
+      avatar: member.avatar
     }
 
     setTeamMembers([...teamMembers, newMember]);
   }
+
+
   return (
     <AppContainer>
       <GlobalStyles/>

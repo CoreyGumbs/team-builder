@@ -8,7 +8,8 @@ const TeamForm = props => {
     const [member, setMember] = useState({
         name: '',
         email: '',
-        role: ''
+        role: '',
+        avatar: ''
     });
 
     const handleChanges = e =>{
@@ -49,6 +50,14 @@ const TeamForm = props => {
                     inputType={'text'} 
                     placeHolder={'Enter Your Role'}
                     value={member.role} 
+                />
+                <FormInput 
+                    labelName={'Avatar:'} 
+                    inputName={'avatar'} 
+                    handleFormChanges={handleChanges} 
+                    inputType={'url'} 
+                    placeHolder={'Avatar Url'}
+                    value={member.avatar} 
                 />
                  <SubmitBtn>Add Member</SubmitBtn>
             </Form>
