@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './css/App.css';
 import TeamForm from './components/Forms/TeamForm';
 import TeamMembers from './components/Team/Team';
+import GlobalStyles from './components/StyledComponents/GlobalStyles';
 
 function App() {
 
@@ -18,6 +19,7 @@ function App() {
   }
   return (
     <div className="App">
+      <GlobalStyles/>
       <TeamForm addTeamMember={addTeamMember} />
       <TeamMembers teamMembers={teamMembers} />
     </div>
