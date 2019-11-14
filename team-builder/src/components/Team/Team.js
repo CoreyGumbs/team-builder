@@ -4,6 +4,12 @@ import {TeamContainer} from '../StyledComponents/TeamStyles';
 
 const TeamMembers = props => {
     const {teamMembers} = props;
+
+    if(teamMembers.length === 0) return (
+        <TeamContainer>
+            Please Add A Team Member
+        </TeamContainer>
+    )
     
     return(
         <TeamContainer>
