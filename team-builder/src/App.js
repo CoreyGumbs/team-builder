@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './css/App.css';
 import TeamForm from './components/Forms/TeamForm';
-//import TeamMembers from './components/Team/Team';
+import TeamMembers from './components/Team/Team';
 
 function App() {
 
@@ -12,13 +12,21 @@ function App() {
   }]);
 
   const addTeamMember = member =>{
-    setTeamMembers(...teamMembers, member);
+    const newMember = {
+      name: member.name,
+      email: member.email,
+      role: member.role
+    }
+
+    setTeamMembers([...teamMembers, newMember]);
   }
+
+  console.log(teamMembers);
 
   return (
     <div className="App">
       <TeamForm addTeamMember={addTeamMember} />
-      {/* <TeamMembers teamMembers={teamMembers} /> */}
+      <TeamMembers teamMembers={teamMembers} />
     </div>
   );
 }

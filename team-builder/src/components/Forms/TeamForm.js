@@ -3,7 +3,7 @@ import FormInput from './FormInput';
 
 const TeamForm = props => {
     const {addTeamMember} = props;
-    
+
     const [member, setMember] = useState({
         name: '',
         email: '',
@@ -17,11 +17,14 @@ const TeamForm = props => {
         });
     }
 
-    console.log(member);
+    const submitForm = e =>{
+        e.preventDefault();
+        addTeamMember(member);
+    }
 
     return (
         <div>
-            <form>
+            <form onSubmit={submitForm}>
                 <FormInput 
                     labelName={'Name:'} 
                     inputName={'name'} 
