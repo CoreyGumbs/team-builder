@@ -1,13 +1,36 @@
 import React from 'react';
+import FormInput from './FormInput';
 
 const TeamForm = props => {
-    const { handleFormChanges } = props;
+    const { setTeamMembers } = props;
+
+    const handleInputChange = e =>{
+        console.log(e.target.value);
+    }
     return (
         <div>
-            <form action="">
-                <input onChange={handleFormChanges} type="text"/>
-                <input onChange={handleFormChanges }type="text"/>
-                <input onChange={handleFormChanges} type="text"/>
+            <form>
+                <FormInput 
+                    labelName={'Name:'} 
+                    inputName={'name'} 
+                    handleFormChanges={handleInputChange} 
+                    inputType={'text'} 
+                    placeHolder={'Enter Your Name'} 
+                />
+                <FormInput 
+                    labelName={'Email:'} 
+                    inputName={'email'} 
+                    handleFormChanges={handleInputChange} 
+                    inputType={'email'} 
+                    placeHolder={'Enter Valid Email'} 
+                />
+                <FormInput 
+                    labelName={'Role:'} 
+                    inputName={'role'} 
+                    handleFormChanges={handleInputChange} 
+                    inputType={'text'} 
+                    placeHolder={'Enter Your Role'} 
+                />
             </form>
         </div>
     )

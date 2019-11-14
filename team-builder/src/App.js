@@ -13,17 +13,9 @@ function App() {
 
   console.log(teamMembers);
 
-  const handleFormChanges = e =>{
-    setTeamMembers(...teamMembers, {
-      name: e.target.value,
-      email: e.target.value,
-      role: e.target.value
-    })
-  }
-
   return (
     <div className="App">
-      <TeamForm handleFormChanges={handleFormChanges} />
+      <TeamForm setTeamMembers={setTeamMembers} />
       <TeamMembers teamMembers={teamMembers} />
     </div>
   );
