@@ -11,15 +11,9 @@ function App() {
     role: 'Web Developer'
   }]);
 
-  const handleChanges = e => {
-    console.log(e.target.name, e.target.value );
-  }
-
- 
-
   return (
     <div className="App">
-      <TeamForm  handleChanges={handleChanges} />
+      <TeamForm />
       {/* <TeamMembers teamMembers={teamMembers} /> */}
     </div>
   );

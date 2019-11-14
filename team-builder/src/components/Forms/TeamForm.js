@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import FormInput from './FormInput';
 
-const TeamForm = props => {
+const TeamForm = () => {
     const [member, setMember] = useState({
         name: '',
         email: '',
