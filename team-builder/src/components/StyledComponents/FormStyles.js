@@ -1,7 +1,7 @@
 import styled from 'styled-components';
  
 
-export const FormContainer = styled.div`
+export const FormContainer = styled.section`
     border: 1px solid blue;
     width: 30%;
 
@@ -21,6 +21,6 @@ export const Label = styled.label`
 `;
 
 export const Input = styled.input`
-    padding: 20px 500px
+    padding: 5px 0;
 
 `;

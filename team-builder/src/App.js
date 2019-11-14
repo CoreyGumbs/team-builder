@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import TeamForm from './components/Forms/TeamForm';
 import TeamMembers from './components/Team/Team';
 import GlobalStyles from './components/StyledComponents/GlobalStyles';
+import {AppContainer} from './components/StyledComponents/AppStyles';
 
 function App() {
 
@@ -17,11 +18,11 @@ function App() {
     setTeamMembers([...teamMembers, newMember]);
   }
   return (
-    <div className="App">
+    <AppContainer>
       <GlobalStyles/>
       <TeamForm addTeamMember={addTeamMember} />
       <TeamMembers teamMembers={teamMembers} />
-    </div>
+    </AppContainer>
   );
 }
 

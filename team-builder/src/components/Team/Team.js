@@ -1,15 +1,16 @@
 import React from 'react';
 import TeamMemberCard from './TeamMemberCard';
+import {TeamContainer} from '../StyledComponents/TeamStyles';
 
 const TeamMembers = props => {
     const {teamMembers} = props;
     
     return(
-        <div>
+        <TeamContainer>
            {teamMembers.map((member, idx) => (
                <TeamMemberCard member={member} key={idx} />
            ))}
-        </div>
+        </TeamContainer>
     )
 }
 
