@@ -1,5 +1,4 @@
 import React from 'react';
-import TeamMembers from './Team';
 
 
 const TeamMemberCard = props => {
@@ -8,6 +7,8 @@ const TeamMemberCard = props => {
     return(
         <div>
             <p>{member.name}</p>
+            <p>{member.email}</p>
+            <p>{member.role}</p>
         </div>
     )
 }
