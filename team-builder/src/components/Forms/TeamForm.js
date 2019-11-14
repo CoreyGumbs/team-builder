@@ -1,8 +1,21 @@
-import React from 'react';
+import React, {useState} from 'react';
 import FormInput from './FormInput';
 
 const TeamForm = props => {
-    const { handleChanges } = props;
+    const [member, setMember] = useState({
+        name: '',
+        email: '',
+        role: ''
+    });
+
+    const handleChanges = e =>{
+        setMember({
+            ...member,
+            [e.target.name]: e.target.value
+        });
+    }
+
+    console.log(member);
 
     return (
         <div>
