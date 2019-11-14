@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react';
 import './css/App.css';
+import TeamMembers from './components/Team/Team';
 
 function App() {
   const [teamMembers, setTeamMembers] = useState([{
@@ -10,7 +11,7 @@ function App() {
 
   return (
     <div className="App">
-    
+      <TeamMembers teamMembers={teamMembers} />
     </div>
   );
 }
