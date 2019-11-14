@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import './css/App.css';
 import TeamForm from './components/Forms/TeamForm';
-import TeamMembers from './components/Team/Team';
+//import TeamMembers from './components/Team/Team';
 
 function App() {
 
@@ -11,12 +11,18 @@ function App() {
     role: 'Web Developer'
   }]);
 
-  console.log(teamMembers);
+  const handleChanges = e => {
+   
+
+    console.log(e.target.name, e.target.value);
+  }
+
+ 
 
   return (
     <div className="App">
-      <TeamForm setTeamMembers={setTeamMembers} />
-      <TeamMembers teamMembers={teamMembers} />
+      <TeamForm  handleChanges={handleChanges} />
+      {/* <TeamMembers teamMembers={teamMembers} /> */}
     </div>
   );
 }

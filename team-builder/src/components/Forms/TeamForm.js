@@ -2,35 +2,33 @@ import React from 'react';
 import FormInput from './FormInput';
 
 const TeamForm = props => {
-    const { setTeamMembers } = props;
+    const { handleChanges } = props;
 
-    const handleInputChange = e =>{
-        console.log(e.target.value);
-    }
     return (
         <div>
             <form>
                 <FormInput 
                     labelName={'Name:'} 
                     inputName={'name'} 
-                    handleFormChanges={handleInputChange} 
+                    handleFormChanges={handleChanges} 
                     inputType={'text'} 
                     placeHolder={'Enter Your Name'} 
                 />
                 <FormInput 
                     labelName={'Email:'} 
                     inputName={'email'} 
-                    handleFormChanges={handleInputChange} 
+                    handleFormChanges={handleChanges} 
                     inputType={'email'} 
                     placeHolder={'Enter Valid Email'} 
                 />
                 <FormInput 
                     labelName={'Role:'} 
                     inputName={'role'} 
-                    handleFormChanges={handleInputChange} 
+                    handleFormChanges={handleChanges} 
                     inputType={'text'} 
                     placeHolder={'Enter Your Role'} 
                 />
+                 <button type="submit">Submit</button>
             </form>
         </div>
     )
