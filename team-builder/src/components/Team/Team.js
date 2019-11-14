@@ -1,14 +1,14 @@
 import React from 'react';
 import TeamMemberCard from './TeamMemberCard';
-import {TeamContainer} from '../StyledComponents/TeamStyles';
+import { TeamContainer,  NoTeamContainer, NoTeamHeading } from '../StyledComponents/TeamStyles';
 
 const TeamMembers = props => {
     const {teamMembers} = props;
 
     if(teamMembers.length === 0) return (
-        <TeamContainer>
-            Please Add A Team Member
-        </TeamContainer>
+        <NoTeamContainer>
+            <NoTeamHeading>Please Add A Team Member!</NoTeamHeading>
+        </NoTeamContainer>
     )
     
     return(
