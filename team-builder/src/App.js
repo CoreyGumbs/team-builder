@@ -1,5 +1,4 @@
 import React, {useState} from 'react';
-import './css/App.css';
 import TeamForm from './components/Forms/TeamForm';
 import TeamMembers from './components/Team/Team';
 import GlobalStyles from './components/StyledComponents/GlobalStyles';

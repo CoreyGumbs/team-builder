@@ -1,5 +1,6 @@
 import React, {useState} from 'react';
 import FormInput from './FormInput';
+import {FormContainer, Form} from '../StyledComponents/FormStyles';
 
 const TeamForm = props => {
     const {addTeamMember} = props;
@@ -23,8 +24,8 @@ const TeamForm = props => {
     }
 
     return (
-        <div>
-            <form onSubmit={submitForm}>
+        <FormContainer>
+            <Form onSubmit={submitForm}>
                 <FormInput 
                     labelName={'Name:'} 
                     inputName={'name'} 
@@ -50,8 +51,8 @@ const TeamForm = props => {
                     value={member.role} 
                 />
                  <button type='submit'>Add Member</button>
-            </form>
-        </div>
+            </Form>
+        </FormContainer>
     )
 }
 
