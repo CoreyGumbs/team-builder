@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import FormInput from './FormInput';
-import {FormContainer, Form} from '../StyledComponents/FormStyles';
+import {FormContainer, Form, SubmitBtn} from '../StyledComponents/FormStyles';
 
 const TeamForm = props => {
     const {addTeamMember} = props;
@@ -50,7 +50,7 @@ const TeamForm = props => {
                     placeHolder={'Enter Your Role'}
                     value={member.role} 
                 />
-                 <button type='submit'>Add Member</button>
+                 <SubmitBtn>Add Member</SubmitBtn>
             </Form>
         </FormContainer>
     )

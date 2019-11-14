@@ -2,25 +2,36 @@ import styled from 'styled-components';
  
 
 export const FormContainer = styled.section`
-    border: 1px solid blue;
-    width: 30%;
-
+     width: 40%;
 `;
 
 export const Form  = styled.form`
-    border: 1px solid red;
+    width: 100%;
 `;
 
 export const FormElements = styled.div`
-    border: 1px solid red;
+    margin: 20px 0;
+    padding: 10px 20px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items:center;
 `;
 
 export const Label = styled.label`
-    border: 1px solid green;
+    margin-right: 5px;
+    font-size: 3rem;
 
 `;
 
 export const Input = styled.input`
-    padding: 5px 0;
+    width: 80%;
+    padding: 13px 20px;
+    font-size: 2rem;
+    border: 1px solid black;
+`;
 
+export const SubmitBtn = styled.button.attrs({
+    type: 'submit'
+})`
 `;
