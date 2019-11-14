@@ -11,9 +11,13 @@ function App() {
     role: 'Web Developer'
   }]);
 
+  const addTeamMember = member =>{
+    setTeamMembers(...teamMembers, member);
+  }
+
   return (
     <div className="App">
-      <TeamForm />
+      <TeamForm addTeamMember={addTeamMember} />
       {/* <TeamMembers teamMembers={teamMembers} /> */}
     </div>
   );
